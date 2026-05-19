@@ -355,7 +355,7 @@ function validarHobbies() {
         return false;
     }
 
-    div.innerText = `Mínimo superado (${arrayHobbies.length} aficiones).`;
+    div.innerText = `Mínimo alcanzado (${arrayHobbies.length} aficiones).`;
     div.className = "form-text text-success";
     return true;
 }

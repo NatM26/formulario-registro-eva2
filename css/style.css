@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    overflow-x: hidden;
+}
+
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(-45deg, #f8fafc, #f0fdfa, #e0f2fe, #f5f3ff);
+    background-size: 400% 400%;
+    animation: gradientMovement 25s ease infinite;
+}
+
+@keyframes gradientMovement {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.relative-content {
+    position: relative;
+    z-index: 1;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+}
+
+.title-custom {
+    color: #1e293b; 
+    font-weight: 700 !important;
+}
+
+.subtitle-custom {
+    font-size: 0.95rem;
+    color: #64748b !important;
+}
+
+.form-section {
+    background: rgba(248, 250, 252, 0.7); 
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.section-title {
+    color: #4f46e5; 
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase; 
+    letter-spacing: 0.06em;
+}
+
+#hobby-list {
+    min-height: 115px; 
+    max-height: 115px;
+    overflow-y: auto; 
+    border-radius: 0.375rem;
+}
+
+#hobby-list .list-group-item {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    color: #334155;
+}
+
+.btn-custom-submit {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-custom-submit:hover {
+    background-color: #4338ca;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.btn-custom-reset {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    color: #475569;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-custom-reset:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.form-text {
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin-top: 5px;
+    display: block;
+}
+
+.input-group .form-control {
+    border-top-left-radius: 0.375rem !important;
+    border-bottom-left-radius: 0.375rem !important;
+}
+.btn-eval {
+    border-top-right-radius: 0.375rem !important;
+    border-bottom-right-radius: 0.375rem !important;
+}
+
+.floating-hobby {
+    position: fixed;
+    font-size: 5.5rem;               
+    opacity: 0.35;                  
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+    filter: grayscale(100%);        
+    mix-blend-mode: multiply;       
+    animation: floatAnimation 7s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-25px) rotate(6deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.hobby-1 { top: 12%; left: 6%; animation-delay: 0s; }
+.hobby-2 { top: 68%; left: 4%; animation-delay: 1.8s; }
+.hobby-3 { top: 15%; right: 6%; animation-delay: 0.9s; }
+.hobby-4 { top: 72%; right: 5%; animation-delay: 2.5s; }
+.hobby-5 { top: 43%; left: 10%; font-size: 4.5rem; opacity: 0.28; animation-delay: 3.2s; }
+.hobby-6 { top: 42%; right: 10%; font-size: 4.5rem; opacity: 0.28; animation-delay: 1.3s; }

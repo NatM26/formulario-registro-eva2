@@ -34,6 +34,19 @@ function agregar(event) {
         return;
     }
 
+    let yaExiste = false;
+    for (let i = 0; i < arrayHobbies.length; i++) {
+        if (arrayHobbies[i].toLowerCase() === hobby.toLowerCase()) {
+            yaExiste = true;
+            break;
+        }
+    }
+
+    if (yaExiste) {
+        divError.innerText = "Esta afición ya fue agregada.";
+        divError.className = "form-text text-danger";
+        return;
+    }
     arrayHobbies.push(hobby);
     actualizarListaDOM();
     input.value = "";

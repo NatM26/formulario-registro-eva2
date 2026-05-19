@@ -114,7 +114,7 @@ function validarUsername() {
     const username = input.value.trim();
 
     if (username === "") {
-        div.innerText = "El nombre de usuario es requerido.";
+        div.innerText = "El nombre de usuario es obligatorio.";
         div.className = "form-text text-danger";
         return false;
     }
@@ -168,7 +168,7 @@ function validarPassword() {
     const username = document.getElementById("username").value.trim();
 
     if (password === "") {
-        div.innerText = "La contraseña es requerida.";
+        div.innerText = "La contraseña es obligatoria.";
         div.className = "form-text text-danger";
         return false;
     }
@@ -243,7 +243,7 @@ function validarConfirmacion() {
     const div = document.getElementById("re-password-msg");
 
     if (rePassword === "") {
-        div.innerText = "La verificación de contraseña es necesaria.";
+        div.innerText = "Debe confirmar la contraseña.";
         div.className = "form-text text-danger";
         return false;
     }
@@ -354,7 +354,7 @@ function validarWeb() {
         return false;
     }
 
-    div.innerText = "Estructura de enlace válida.";
+    div.innerText = "Enlace válido.";
     div.className = "form-text text-success";
     return true;
 }
@@ -363,12 +363,12 @@ function validarHobbies() {
     const div = document.getElementById("hobby-msg");
 
     if (arrayHobbies.length < 2) {
-        div.innerText = `Llevas ${arrayHobbies.length}/2 aficiones. Complete el mínimo requerido.`;
+        div.innerText = `Ingrese al menos 2 aficiones (llevas ${arrayHobbies.length}).`;
         div.className = "form-text text-danger";
         return false;
     }
 
-    div.innerText = `Mínimo alcanzado (${arrayHobbies.length} aficiones).`;
+    div.innerText = `Aficiones listas (${arrayHobbies.length} agregadas).`;
     div.className = "form-text text-success";
     return true;
 }

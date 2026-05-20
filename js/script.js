@@ -87,7 +87,7 @@ function validar(event) {
     const mValid = validarComuna();
     const tValid = validarTelefono();
     const wValid = validarWeb();
-    const hValid = validarHobbies();
+    const hValid = validarHobbies(true);
     if (!(uValid && pValid && cValid && dValid && mValid && tValid && wValid && hValid)) {
         if (event) event.preventDefault();
         return false;
@@ -359,12 +359,16 @@ function validarWeb() {
     return true;
 }
 
-function validarHobbies() {
+function validarHobbies(esDelSubmit = false) {
     const div = document.getElementById("hobby-msg");
-
     if (arrayHobbies.length < 2) {
-        div.innerText = `Ingrese al menos 2 aficiones (llevas ${arrayHobbies.length}).`;
-        div.className = "form-text text-danger";
+        if (esDelSubmit) {
+            div.innerText = `Ingrese al menos 2 aficiones (llevas ${arrayHobbies.length}).`;
+            div.className = "form-text text-danger";
+        } else {
+            div.innerText = `Llevas ${arrayHobbies.length} de 2 aficiones requeridas.`;
+            div.className = "form-text text-muted"; 
+        }
         return false;
     }
 

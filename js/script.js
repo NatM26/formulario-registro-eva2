@@ -291,7 +291,7 @@ function validarTelefono() {
     const div = document.getElementById("telefono-msg");
 
     if (telefono === "") {
-        div.innerText = "El número telefónico es obligatorio.";
+        div.innerText = "El número de teléfono es obligatorio.";
         div.className = "form-text text-danger";
         return false;
     }
